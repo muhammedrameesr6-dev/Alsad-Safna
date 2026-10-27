@@ -46,7 +46,7 @@ function PersonCard({
 }
 
 export function Couple() {
-  const { bride, groom } = weddingData;
+  const { groom, bride } = weddingData;
 
   return (
     <section className="relative overflow-hidden bg-ivory py-24 md:py-32">
@@ -60,14 +60,15 @@ export function Couple() {
         </Reveal>
 
         <div className="mt-14 grid items-center gap-8 md:grid-cols-[1fr_auto_1fr]">
+          {/* Alsad First */}
           <Reveal delay={100}>
             <PersonCard
-              role="The Bride"
-              name={bride.fullName}
-              parents={`Daughter of ${bride.father} & ${bride.mother}`}
-              residence={bride.residence}
-              grandparents={bride.grandparents}
-              initial={bride.name.charAt(0)}
+              role="The Groom"
+              name={groom.fullName}
+              parents={`Son of ${groom.father} & ${groom.mother}`}
+              residence={groom.residence}
+              grandparents={groom.grandparents}
+              initial={groom.name.charAt(0)}
             />
           </Reveal>
 
@@ -77,14 +78,15 @@ export function Couple() {
             </span>
           </Reveal>
 
+          {/* Safna Second */}
           <Reveal delay={300}>
             <PersonCard
-              role="The Groom"
-              name={groom.fullName}
-              parents={`Son of ${groom.father} & ${groom.mother}`}
-              residence={groom.residence}
-              grandparents={groom.grandparents}
-              initial={groom.name.charAt(0)}
+              role="The Bride"
+              name={bride.fullName}
+              parents={`Daughter of ${bride.father} & ${bride.mother}`}
+              residence={bride.residence}
+              grandparents={bride.grandparents}
+              initial={bride.name.charAt(0)}
             />
           </Reveal>
         </div>

@@ -35,7 +35,7 @@ export function Navbar() {
           href="#home"
           className="font-serif text-xl tracking-[0.2em] text-burgundy"
         >
-          S <span className="text-gold">&amp;</span> A
+          A <span className="text-gold">&amp;</span> S
         </a>
 
         <ul className="hidden items-center gap-10 md:flex">
@@ -72,7 +72,7 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between px-6 py-4">
           <span className="font-serif text-xl tracking-[0.2em] text-burgundy">
-            S <span className="text-gold">&amp;</span> A
+            A <span className="text-gold">&amp;</span> S
           </span>
           <button
             type="button"

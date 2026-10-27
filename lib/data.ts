@@ -2,15 +2,6 @@ export interface WeddingData {
   monogram: string;
   flightNo: string;
   departureTime: string;
-  bride: {
-    name: string;
-    fullName: string;
-    father: string;
-    mother: string;
-    residence: string;
-    grandparents: string;
-    phone: string;
-  };
   groom: {
     name: string;
     fullName: string;
@@ -20,6 +11,15 @@ export interface WeddingData {
     grandparents: string;
     phone: string;
     altPhone: string;
+  };
+  bride: {
+    name: string;
+    fullName: string;
+    father: string;
+    mother: string;
+    residence: string;
+    grandparents: string;
+    phone: string;
   };
   date: string;
   dateLabel: string;
@@ -33,35 +33,18 @@ export interface WeddingData {
     maps: string;
     mapsEmbed: string;
   };
-  reception: {
-    dateLabel: string;
-    dayLabel: string;
-    timeLabel: string;
-    venueName: string;
-    address: string;
-    maps: string;
-  };
   compliments: string;
   contact: {
     name: string;
     phone: string;
+    altPhone: string;
   };
 }
 
 export const weddingData: WeddingData = {
-  monogram: "S & A",
+  monogram: "A & S",
   flightNo: "AS-2027",
   departureTime: "11:00 AM",
-  bride: {
-    name: "Safna",
-    fullName: "Safna Navas",
-    father: "Mr. Navas S",
-    mother: "Mrs. Fasila S",
-    residence: "Safna Manzil, Umayanalloor P.O, Kollam",
-    grandparents:
-      "Grand D/o Late Saidappa Rawther & Subaida Beevi and Shamsudheen & Late Sulbath",
-    phone: "9847593553",
-  },
   groom: {
     name: "Alsad",
     fullName: "Alsad Subair",
@@ -72,6 +55,16 @@ export const weddingData: WeddingData = {
       "Grand S/o Late Muhammed Kunju & Pathumuthu and Badarudheen Haji & Late Rasheeda Beevi",
     phone: "9447942779",
     altPhone: "8304862779",
+  },
+  bride: {
+    name: "Safna",
+    fullName: "Safna Navas",
+    father: "Mr. Navas S",
+    mother: "Mrs. Fasila S",
+    residence: "Safna Manzil, Umayanalloor P.O, Kollam",
+    grandparents:
+      "Grand D/o Late Saidappa Rawther & Subaida Beevi and Shamsudheen & Late Sulbath",
+    phone: "9847593553",
   },
   date: "2027-01-03T12:00:00",
   dateLabel: "03 • JANUARY • 2027",
@@ -86,18 +79,11 @@ export const weddingData: WeddingData = {
     mapsEmbed:
       "https://www.google.com/maps?q=Ayisha+Convention+Centre+Mylapore+Kollam&output=embed",
   },
-  reception: {
-    dateLabel: "02 • JANUARY • 2027",
-    dayLabel: "Saturday",
-    timeLabel: "From 4:00 pm onwards",
-    venueName: "Ayisha Convention Centre",
-    address: "Ayisha Convention Centre, Mylapore, Kollam",
-    maps: "https://maps.google.com/?q=Ayisha+Convention+Centre+Mylapore+Kollam",
-  },
   compliments: "Suhana Navas",
   contact: {
-    name: "Mr. Navas S",
-    phone: "9847593553",
+    name: "Mr. Subair",
+    phone: "9447942779",
+    altPhone: "8304862779",
   },
 };
 

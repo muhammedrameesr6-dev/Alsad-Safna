@@ -70,9 +70,9 @@ export function Hero({ onOpenInvitation }: HeroProps) {
 
         {/* Travel & Tourism Route Pill */}
         <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-sky-300/60 bg-sky-50/70 px-4 py-1 text-[11px] font-sans uppercase tracking-[0.2em] text-sky-800 shadow-sm backdrop-blur-sm">
-          <span>Umayanalloor</span>
-          <Plane className="size-3 text-sky-600 rotate-45" />
           <span>Nedumpana</span>
+          <Plane className="size-3 text-sky-600 rotate-45" />
+          <span>Umayanalloor</span>
           <span className="text-gold font-bold">➔</span>
           <span className="font-semibold text-burgundy">Ayisha Convention Centre</span>
         </div>
@@ -83,9 +83,9 @@ export function Hero({ onOpenInvitation }: HeroProps) {
           </p>
 
           <div className="mt-4 flex flex-col items-center">
-            {/* Bride First */}
+            {/* Alsad First */}
             <h1 className="font-serif text-5xl font-light capitalize leading-none text-burgundy sm:text-7xl md:text-8xl">
-              {weddingData.bride.fullName}
+              {weddingData.groom.fullName}
             </h1>
             <div className="my-2 flex items-center gap-3">
               <span className="h-px w-8 bg-gold/40" />
@@ -95,16 +95,15 @@ export function Hero({ onOpenInvitation }: HeroProps) {
               <Plane className="size-4 text-sky-600 rotate-45" />
               <span className="h-px w-8 bg-gold/40" />
             </div>
-            {/* Groom Second */}
+            {/* Safna Second */}
             <h1 className="font-serif text-5xl font-light capitalize leading-none text-burgundy sm:text-7xl md:text-8xl">
-              {weddingData.groom.fullName}
+              {weddingData.bride.fullName}
             </h1>
           </div>
         </div>
 
         <p className="mt-8 max-w-lg text-pretty font-serif text-lg italic leading-relaxed text-foreground/80 sm:text-xl">
-          Request your esteemed presence and blessings for the marriage of our
-          beloved daughter.
+          Request your esteemed presence and blessings as we embark on our lifetime journey together.
         </p>
 
         <div className="mt-9 flex flex-col items-center gap-1.5">

@@ -40,10 +40,10 @@ export function InvitationCard() {
           <Reveal delay={100}>
             <div className="mx-auto mt-9 max-w-xl">
               <p className="font-serif text-lg italic text-gold sm:text-xl">
-                {bride.father} &amp; {bride.mother}
+                {groom.father} &amp; {groom.mother}
               </p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-foreground/70">
-                {bride.residence}
+                {groom.residence}
               </p>
               <p className="mt-1 text-xs tracking-wider text-foreground/60">
                 Mob:{" "}
@@ -53,6 +53,13 @@ export function InvitationCard() {
                 >
                   {contact.phone}
                 </a>
+                <span> • </span>
+                <a
+                  href={`tel:${contact.altPhone}`}
+                  className="font-medium text-burgundy underline hover:text-gold"
+                >
+                  {contact.altPhone}
+                </a>
               </p>
             </div>
           </Reveal>
@@ -61,22 +68,10 @@ export function InvitationCard() {
           <Reveal delay={150}>
             <p className="mx-auto mt-8 max-w-lg text-pretty font-serif text-xl leading-relaxed text-foreground/85 sm:text-2xl">
               Request your esteemed presence and blessings for the marriage of
-              our beloved daughter
             </p>
 
-            {/* Bride & Groom names: Bride First, Groom Second */}
+            {/* Alsad First, Safna Second */}
             <div className="mt-8 flex flex-col items-center">
-              <h3 className="font-serif text-4xl font-light text-burgundy sm:text-5xl">
-                {bride.fullName}
-              </h3>
-              <p className="mt-2 max-w-md text-xs italic leading-relaxed text-foreground/60">
-                ({bride.grandparents})
-              </p>
-
-              <span className="my-3 font-serif text-2xl italic text-gold sm:text-3xl">
-                with
-              </span>
-
               <h3 className="font-serif text-4xl font-light text-burgundy sm:text-5xl">
                 {groom.fullName}
               </h3>
@@ -89,6 +84,23 @@ export function InvitationCard() {
               <p className="mt-1 max-w-md text-xs italic leading-relaxed text-foreground/60">
                 ({groom.grandparents})
               </p>
+
+              <span className="my-3 font-serif text-2xl italic text-gold sm:text-3xl">
+                with
+              </span>
+
+              <h3 className="font-serif text-4xl font-light text-burgundy sm:text-5xl">
+                {bride.fullName}
+              </h3>
+              <p className="mt-1 text-sm font-medium text-foreground/85">
+                D/o. {bride.father} &amp; {bride.mother}
+              </p>
+              <p className="mt-0.5 text-xs text-foreground/65">
+                {bride.residence}
+              </p>
+              <p className="mt-1 max-w-md text-xs italic leading-relaxed text-foreground/60">
+                ({bride.grandparents})
+              </p>
             </div>
 
             <p className="mt-8 font-serif text-2xl italic text-gold">
@@ -96,7 +108,7 @@ export function InvitationCard() {
             </p>
           </Reveal>
 
-          {/* Nikah Schedule Summary (Centered, Reception removed) */}
+          {/* Nikah Schedule Summary */}
           <Reveal delay={200}>
             <div className="mx-auto mt-8 max-w-md border-t border-b border-gold/25 py-6">
               <p className="font-sans text-xs uppercase tracking-[0.25em] text-gold">

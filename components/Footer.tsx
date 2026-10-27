@@ -57,11 +57,11 @@ export function Footer() {
         <Reveal delay={150}>
           <Ornament className="mt-10" />
 
-          {/* Bride First, Groom Second */}
+          {/* Alsad First, Safna Second */}
           <h2 className="mt-10 font-serif text-5xl font-light text-champagne sm:text-6xl">
-            {weddingData.bride.name}
-            <span className="mx-3 italic text-gold">&amp;</span>
             {weddingData.groom.name}
+            <span className="mx-3 italic text-gold">&amp;</span>
+            {weddingData.bride.name}
           </h2>
 
           <p className="mt-6 font-sans text-xs uppercase tracking-[0.4em] text-ivory/70">

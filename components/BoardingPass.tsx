@@ -11,9 +11,9 @@ export function BoardingPass() {
   const [showOriginalModal, setShowOriginalModal] = useState(false);
 
   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-    "Wedding: Safna Navas & Alsad Subair"
+    "Wedding: Alsad Subair & Safna Navas"
   )}&dates=20270103T063000Z/20270103T070000Z&details=${encodeURIComponent(
-    "Nikah ceremony between 12:00 PM and 12:30 PM. Reception on Saturday 2nd Jan 4:00 PM onwards."
+    "Nikah ceremony between 12:00 PM and 12:30 PM at Ayisha Convention Centre, Mylapore, Kollam."
   )}&location=${encodeURIComponent(
     "Ayisha Convention Centre, Mylapore, Kollam, Kerala"
   )}`;
@@ -72,24 +72,24 @@ export function BoardingPass() {
                   ﷽
                 </div>
                 <div className="rotate-180 [writing-mode:vertical-rl] font-serif text-lg tracking-[0.25em] font-light">
-                  SAFNA &amp; ALSAD
+                  ALSAD &amp; SAFNA
                 </div>
                 <Plane className="size-6 text-white/80 rotate-45" />
               </div>
 
               {/* Main Flight Info */}
               <div className="flex-1 p-6 sm:p-8">
-                {/* Header Route: Bride First, Groom Second */}
+                {/* Header Route: Alsad First, Safna Second */}
                 <div className="flex flex-wrap items-center justify-between border-b border-dashed border-neutral-300 pb-5 gap-3">
                   <div className="flex items-center gap-3">
                     <span className="font-serif text-2xl font-bold tracking-wider text-burgundy sm:text-3xl">
-                      SAFNA NAVAS
+                      ALSAD SUBAIR
                     </span>
                     <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-sky-100 text-sky-700">
                       <Plane className="size-4 animate-pulse rotate-45" />
                     </div>
                     <span className="font-serif text-2xl font-bold tracking-wider text-burgundy sm:text-3xl">
-                      ALSAD SUBAIR
+                      SAFNA NAVAS
                     </span>
                   </div>
 
@@ -102,40 +102,16 @@ export function BoardingPass() {
                   Name of Passengers • Request the honour of your presence
                 </div>
 
-                {/* Two Passengers Grid: Bride First (Passenger 01), Groom Second (Passenger 02) */}
+                {/* Two Passengers Grid: Alsad First (Passenger 01), Safna Second (Passenger 02) */}
                 <div className="mt-4 grid gap-6 border-b border-neutral-200 pb-6 sm:grid-cols-2">
-                  {/* Passenger 1: Safna (Bride) */}
-                  <div className="rounded-xl border border-neutral-200/80 bg-neutral-50/60 p-4 shadow-sm">
-                    <div className="flex items-center justify-between">
-                      <span className="font-serif text-lg font-bold text-burgundy">
-                        SAFNA
-                      </span>
-                      <span className="text-[10px] font-mono uppercase text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded">
-                        Bride / Passenger 01
-                      </span>
-                    </div>
-                    <p className="mt-2 text-xs font-medium text-foreground/85">
-                      D/o {weddingData.bride.father} &amp; {weddingData.bride.mother}
-                    </p>
-                    <p className="text-xs text-foreground/65">
-                      {weddingData.bride.residence}
-                    </p>
-                    <div className="mt-3 flex items-center gap-2 text-xs font-mono text-sky-700">
-                      <Phone className="size-3 shrink-0" />
-                      <a href={`tel:${weddingData.bride.phone}`} className="hover:underline">
-                        {weddingData.bride.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Passenger 2: Alsad (Groom) */}
+                  {/* Passenger 1: Alsad (Groom) */}
                   <div className="rounded-xl border border-neutral-200/80 bg-neutral-50/60 p-4 shadow-sm">
                     <div className="flex items-center justify-between">
                       <span className="font-serif text-lg font-bold text-burgundy">
                         ALSAD
                       </span>
                       <span className="text-[10px] font-mono uppercase text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded">
-                        Groom / Passenger 02
+                        Groom / Passenger 01
                       </span>
                     </div>
                     <p className="mt-2 text-xs font-medium text-foreground/85">
@@ -152,6 +128,30 @@ export function BoardingPass() {
                       <span>•</span>
                       <a href={`tel:${weddingData.groom.altPhone}`} className="hover:underline">
                         {weddingData.groom.altPhone}
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Passenger 2: Safna (Bride) */}
+                  <div className="rounded-xl border border-neutral-200/80 bg-neutral-50/60 p-4 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <span className="font-serif text-lg font-bold text-burgundy">
+                        SAFNA
+                      </span>
+                      <span className="text-[10px] font-mono uppercase text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded">
+                        Bride / Passenger 02
+                      </span>
+                    </div>
+                    <p className="mt-2 text-xs font-medium text-foreground/85">
+                      D/o {weddingData.bride.father} &amp; {weddingData.bride.mother}
+                    </p>
+                    <p className="text-xs text-foreground/65">
+                      {weddingData.bride.residence}
+                    </p>
+                    <div className="mt-3 flex items-center gap-2 text-xs font-mono text-sky-700">
+                      <Phone className="size-3 shrink-0" />
+                      <a href={`tel:${weddingData.bride.phone}`} className="hover:underline">
+                        {weddingData.bride.phone}
                       </a>
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export function BoardingPass() {
                   </span>
                 </div>
 
-                {/* Circular Rubber Stamp: "You are invited to the ceremony - SAFNA & ALSAD" */}
+                {/* Circular Rubber Stamp: "You are invited to the ceremony - ALSAD & SAFNA" */}
                 <div className="relative my-6 flex justify-center">
                   <div className="relative flex size-28 -rotate-12 items-center justify-center rounded-full border-2 border-dashed border-red-700/60 p-2 text-center text-red-800/80 shadow-sm transition-transform hover:rotate-0">
                     <div className="flex flex-col items-center justify-center">
@@ -224,7 +224,7 @@ export function BoardingPass() {
                         You are invited to the ceremony
                       </span>
                       <span className="my-0.5 font-serif text-xs font-bold uppercase tracking-wider text-red-900">
-                        SAFNA &amp; ALSAD
+                        ALSAD &amp; SAFNA
                       </span>
                       <span className="text-[7px] tracking-widest font-mono">
                         ★ OFFICIAL PASS ★
