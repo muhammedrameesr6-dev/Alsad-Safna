@@ -33,7 +33,7 @@ export interface WeddingData {
     maps: string;
     mapsEmbed: string;
   };
-  compliments: string;
+  companies: string[];
   contact: {
     name: string;
     phone: string;
@@ -79,7 +79,11 @@ export const weddingData: WeddingData = {
     mapsEmbed:
       "https://www.google.com/maps?q=Ayisha+Convention+Centre+Mylapore+Kollam&output=embed",
   },
-  compliments: "Suhana Navas",
+  companies: [
+    "EASY FLY TOURS AND TRAVELS",
+    "MAKE YOUR BRAND BUSINESS SETUP",
+    "GOLDEN WINGS TOURISM",
+  ],
   contact: {
     name: "Mr. Subair",
     phone: "9447942779",

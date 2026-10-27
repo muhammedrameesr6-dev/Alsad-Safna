@@ -68,12 +68,22 @@ export function Footer() {
             {weddingData.dateLabel}
           </p>
 
-          <p className="mt-3 font-serif text-sm italic text-champagne/80">
-            With best compliments from :{" "}
-            <span className="font-semibold text-ivory">
-              {weddingData.compliments}
-            </span>
-          </p>
+          {/* Three Companies Header */}
+          <div className="mt-8 border-t border-gold/25 pt-6">
+            <p className="font-sans text-[11px] uppercase tracking-[0.25em] text-champagne/80">
+              With Best Compliments From
+            </p>
+            <div className="mt-3 flex flex-col items-center justify-center gap-1.5 font-sans text-xs tracking-wider text-ivory sm:flex-row sm:flex-wrap sm:gap-2.5">
+              {weddingData.companies.map((company, idx) => (
+                <React.Fragment key={company}>
+                  <span className="font-medium text-champagne">{company}</span>
+                  {idx < weddingData.companies.length - 1 && (
+                    <span className="hidden text-gold sm:inline">•</span>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
 
           <p className="mt-8 text-pretty text-sm leading-relaxed text-ivory/60">
             Your presence and prayers are the greatest gift as we begin our

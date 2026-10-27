@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 import { weddingData } from "@/lib/data";
 
 export function InvitationCard() {
-  const { bride, groom, dateLabel, dayLabel, hijriDate, timeLabel, venue, compliments, contact } =
+  const { bride, groom, dateLabel, dayLabel, hijriDate, timeLabel, venue, companies, contact } =
     weddingData;
 
   return (
@@ -110,7 +110,7 @@ export function InvitationCard() {
 
           {/* Nikah Schedule Summary */}
           <Reveal delay={200}>
-            <div className="mx-auto mt-8 max-w-md border-t border-b border-gold/25 py-6">
+            <div className="mx-auto mt-8 max-w-lg border-t border-b border-gold/25 py-6">
               <p className="font-sans text-xs uppercase tracking-[0.25em] text-gold">
                 Nikah Ceremony
               </p>
@@ -127,10 +127,22 @@ export function InvitationCard() {
                 {venue.name}, {venue.address}
               </p>
 
-              <p className="mt-6 border-t border-gold/15 pt-4 font-serif text-sm italic text-foreground/70">
-                With best compliments from :{" "}
-                <span className="font-medium text-burgundy">{compliments}</span>
-              </p>
+              {/* Three Companies Compliments */}
+              <div className="mt-6 border-t border-gold/15 pt-4 text-center">
+                <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-gold font-medium">
+                  With Best Compliments From
+                </p>
+                <div className="mt-2 flex flex-col gap-1 text-xs font-sans font-medium text-foreground/80 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-2">
+                  {companies.map((company, idx) => (
+                    <React.Fragment key={company}>
+                      <span className="font-semibold text-burgundy">{company}</span>
+                      {idx < companies.length - 1 && (
+                        <span className="hidden text-gold sm:inline">•</span>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
             </div>
           </Reveal>
 
