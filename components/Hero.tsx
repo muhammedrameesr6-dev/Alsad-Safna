@@ -70,7 +70,7 @@ export function Hero({ onOpenInvitation }: HeroProps) {
 
         {/* Travel & Tourism Route Pill */}
         <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-sky-300/60 bg-sky-50/70 px-4 py-1 text-[11px] font-sans uppercase tracking-[0.2em] text-sky-800 shadow-sm backdrop-blur-sm">
-          <span>Nedumpana</span>
+          <span>Kannanalloor</span>
           <Plane className="size-3 text-sky-600 rotate-45" />
           <span>Umayanalloor</span>
           <span className="text-gold font-bold">➔</span>
