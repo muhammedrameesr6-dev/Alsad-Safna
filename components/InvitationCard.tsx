@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 import { weddingData } from "@/lib/data";
 
 export function InvitationCard() {
-  const { bride, groom, dateLabel, dayLabel, hijriDate, timeLabel, venue, reception, compliments, contact } =
+  const { bride, groom, dateLabel, dayLabel, hijriDate, timeLabel, venue, compliments, contact } =
     weddingData;
 
   return (
@@ -64,7 +64,7 @@ export function InvitationCard() {
               our beloved daughter
             </p>
 
-            {/* Bride & Groom names highlighted */}
+            {/* Bride & Groom names: Bride First, Groom Second */}
             <div className="mt-8 flex flex-col items-center">
               <h3 className="font-serif text-4xl font-light text-burgundy sm:text-5xl">
                 {bride.fullName}
@@ -80,10 +80,10 @@ export function InvitationCard() {
               <h3 className="font-serif text-4xl font-light text-burgundy sm:text-5xl">
                 {groom.fullName}
               </h3>
-              <p className="mt-1 text-sm font-medium text-foreground/80">
+              <p className="mt-1 text-sm font-medium text-foreground/85">
                 S/o. {groom.father} &amp; {groom.mother}
               </p>
-              <p className="mt-0.5 text-xs text-foreground/60">
+              <p className="mt-0.5 text-xs text-foreground/65">
                 {groom.residence}
               </p>
               <p className="mt-1 max-w-md text-xs italic leading-relaxed text-foreground/60">
@@ -96,48 +96,26 @@ export function InvitationCard() {
             </p>
           </Reveal>
 
-          {/* Nikah & Reception Schedule Summary */}
+          {/* Nikah Schedule Summary (Centered, Reception removed) */}
           <Reveal delay={200}>
-            <div className="mx-auto mt-8 border-t border-b border-gold/25 py-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className="border-b border-gold/20 pb-4 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-4">
-                  <p className="font-sans text-xs uppercase tracking-[0.25em] text-gold">
-                    Nikah Ceremony
-                  </p>
-                  <p className="mt-2 font-serif text-xl font-light text-burgundy">
-                    {dateLabel.replace(/•/g, "·")}
-                  </p>
-                  <p className="text-xs uppercase tracking-wider text-foreground/70">
-                    {dayLabel} • ({hijriDate})
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-foreground/85">
-                    Nikah: {timeLabel}
-                  </p>
-                  <p className="mt-1 text-xs text-foreground/65">
-                    {venue.name}, {venue.address}
-                  </p>
-                </div>
+            <div className="mx-auto mt-8 max-w-md border-t border-b border-gold/25 py-6">
+              <p className="font-sans text-xs uppercase tracking-[0.25em] text-gold">
+                Nikah Ceremony
+              </p>
+              <p className="mt-2 font-serif text-2xl font-light text-burgundy">
+                {dateLabel.replace(/•/g, "·")}
+              </p>
+              <p className="text-xs uppercase tracking-wider text-foreground/70">
+                {dayLabel} • ({hijriDate})
+              </p>
+              <p className="mt-3 text-sm font-medium text-foreground/85">
+                Nikah: {timeLabel}
+              </p>
+              <p className="mt-1 text-xs text-foreground/65">
+                {venue.name}, {venue.address}
+              </p>
 
-                <div className="sm:pl-4">
-                  <p className="font-sans text-xs uppercase tracking-[0.25em] text-gold">
-                    Reception
-                  </p>
-                  <p className="mt-2 font-serif text-xl font-light text-burgundy">
-                    {reception.dateLabel.replace(/•/g, "·")}
-                  </p>
-                  <p className="text-xs uppercase tracking-wider text-foreground/70">
-                    {reception.dayLabel}
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-foreground/85">
-                    {reception.timeLabel}
-                  </p>
-                  <p className="mt-1 text-xs text-foreground/65">
-                    {reception.venueName}
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-6 font-serif text-sm italic text-foreground/70">
+              <p className="mt-6 border-t border-gold/15 pt-4 font-serif text-sm italic text-foreground/70">
                 With best compliments from :{" "}
                 <span className="font-medium text-burgundy">{compliments}</span>
               </p>

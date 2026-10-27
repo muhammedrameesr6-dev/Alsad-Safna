@@ -7,8 +7,7 @@ import { Reveal } from "./Reveal";
 import { weddingData } from "@/lib/data";
 
 export function Venue() {
-  const { venue, dateLabel, dayLabel, hijriDate, timeLabel, reception } =
-    weddingData;
+  const { venue, dateLabel, dayLabel, hijriDate, timeLabel } = weddingData;
 
   return (
     <section
@@ -29,7 +28,7 @@ export function Venue() {
           <Ornament className="mt-7" />
         </Reveal>
 
-        {/* Centered Ornate Venue Details Card (Without Map Embed) */}
+        {/* Centered Ornate Venue Details Card */}
         <Reveal delay={150} className="mt-14">
           <div className="relative mx-auto max-w-2xl border border-gold/30 bg-warm-white p-8 sm:p-12 shadow-xl shadow-burgundy/5 text-center">
             {/* Corner Ornate Accents */}
@@ -91,24 +90,8 @@ export function Venue() {
               </div>
             </div>
 
-            {/* Reception Box */}
-            <div className="mt-10 border-t border-gold/20 pt-8 text-center">
-              <p className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-                Reception
-              </p>
-              <p className="mt-2 font-serif text-xl font-medium text-burgundy">
-                {reception.dayLabel}, {reception.dateLabel.replace(/•/g, "·")}
-              </p>
-              <p className="mt-1 text-sm font-medium text-foreground/80">
-                {reception.timeLabel}
-              </p>
-              <p className="mt-1 text-xs text-foreground/60">
-                {reception.address}
-              </p>
-            </div>
-
             {/* Directions Action */}
-            <div className="mt-10 flex justify-center">
+            <div className="mt-10 flex justify-center border-t border-gold/20 pt-8">
               <a
                 href={venue.maps}
                 target="_blank"

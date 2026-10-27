@@ -1,24 +1,22 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Plane } from "lucide-react";
 
 export function FlightAnimation() {
-  const [flying, setFlying] = useState(true);
-
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-16 z-30 overflow-hidden h-28">
+    <div className="pointer-events-none absolute inset-x-0 top-16 z-20 overflow-hidden h-24">
       {/* Flight trajectory line with animated plane */}
       <div className="relative w-full h-full">
-        <div className="plane-trail-container absolute w-full top-6">
+        <div className="plane-trail-container absolute w-full top-4">
           <svg
-            className="w-full h-20 opacity-30 sm:opacity-40"
+            className="w-full h-16 opacity-30 sm:opacity-40"
             viewBox="0 0 1200 80"
             fill="none"
             preserveAspectRatio="none"
           >
             <path
-              d="M-50,60 C300,10 600,70 1250,20"
+              d="M-50,55 C300,10 600,65 1250,15"
               stroke="#b08a45"
               strokeWidth="1.5"
               strokeDasharray="6 6"

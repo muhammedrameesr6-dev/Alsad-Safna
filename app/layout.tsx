@@ -24,20 +24,20 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
-  title: "Alsad & Safna | Wedding Invitation",
+  title: "Safna & Alsad | Wedding Invitation",
   description:
     "Mr. Navas S & Mrs. Fasila S request your esteemed presence and blessings for the marriage of their beloved daughter Safna Navas with Alsad Subair on 3rd January 2027 at Ayisha Convention Centre, Mylapore, Kollam.",
   generator: "v0.app",
   openGraph: {
-    title: "Alsad & Safna | Wedding Invitation",
+    title: "Safna & Alsad | Wedding Invitation",
     description:
-      "Request your esteemed presence and blessings for the marriage of Safna Navas with Alsad Subair on 3rd January 2027 at Ayisha Convention Centre, Mylapore, Kollam.",
+      "Request your esteemed presence and blessings for the marriage of our beloved daughter Safna Navas with Alsad Subair on 3rd January 2027 at Ayisha Convention Centre, Mylapore, Kollam.",
   },
   twitter: {
     card: "summary",
-    title: "Alsad & Safna | Wedding Invitation",
+    title: "Safna & Alsad | Wedding Invitation",
     description:
-      "Request your esteemed presence and blessings for the marriage of Safna Navas with Alsad Subair on 3rd January 2027 at Ayisha Convention Centre, Mylapore, Kollam.",
+      "Request your esteemed presence and blessings for the marriage of our beloved daughter Safna Navas with Alsad Subair on 3rd January 2027 at Ayisha Convention Centre, Mylapore, Kollam.",
   },
 };
 
