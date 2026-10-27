@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Ornament, Subtitle } from "./Ornament";
 import { Reveal } from "./Reveal";
+import { TravelOrnament } from "./TravelOrnament";
 import { weddingData } from "@/lib/data";
 
 export function InvitationCard() {
@@ -146,15 +146,9 @@ export function InvitationCard() {
             </div>
           </Reveal>
 
+          {/* Travel & Tourism Aviation Emblem (Replaced Floral Branch) */}
           <Reveal delay={250}>
-            <Image
-              src="/images/floral-branch.png"
-              alt=""
-              aria-hidden="true"
-              width={520}
-              height={180}
-              className="blend-floral mx-auto mt-10 w-64 sm:w-80"
-            />
+            <TravelOrnament />
           </Reveal>
         </div>
       </div>
